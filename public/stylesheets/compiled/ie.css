@@ -1,0 +1,97 @@
+/*
+Syntax error: Invalid CSS after "(true)": expected expression (e.g. 1px, bold), was ";"
+        on line 8 of /home/houdini/markup/apartmentrent/app/stylesheets/ie.sass
+
+3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+4: // @include blueprint-ie
+5: 
+6: //Recommended Blueprint configuration with scoping and semantic layout:
+7: body.bp
+8:   @include blueprint-ie(true);
+9:   // Note: Blueprint centers text to fix IE6 container centering.
+10:   // This means all your texts will be centered under all version of IE by default.
+11:   // If your container does not have the .container class, don't forget to restore
+12:   // the correct behavior to your main container (but not the body tag!)
+13:   // Example:
+
+Backtrace:
+/home/houdini/markup/apartmentrent/app/stylesheets/ie.sass:8
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/scss/parser.rb:838:in `expected'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/script/lexer.rb:193:in `expected!'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/script/parser.rb:392:in `assert_done'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/script/parser.rb:86:in `parse_mixin_include_arglist'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:662:in `parse_mixin_include'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:524:in `parse_directive'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:428:in `parse_line'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:328:in `build_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:347:in `append_children'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:346:in `each'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:346:in `append_children'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:337:in `build_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:330:in `each'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:330:in `build_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:347:in `append_children'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:346:in `each'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:346:in `append_children'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:216:in `_to_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:179:in `to_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/haml/util.rb:294:in `silence_haml_warnings'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/engine.rb:179:in `to_tree'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/files.rb:44:in `tree_for'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `update_stylesheets'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `update_stylesheets'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/application.rb:77:in `send'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/houdini/.rvm/rubies/ruby-1.8.7-p330/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/commands/server.rb:65:in `start'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/commands.rb:30
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/commands.rb:27:in `tap'
+/home/houdini/.rvm/gems/ruby-1.8.7-p330/gems/railties-3.0.4/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"(true)\": expected expression (e.g. 1px, bold), was \";\"\A         on line 8 of /home/houdini/markup/apartmentrent/app/stylesheets/ie.sass\A \A 3: // To generate css equivalent to the blueprint css but with your configuration applied, uncomment:\A 4: // @include blueprint-ie\A 5: \A 6: //Recommended Blueprint configuration with scoping and semantic layout:\A 7: body.bp\A 8:   @include blueprint-ie(true);\A 9:   // Note: Blueprint centers text to fix IE6 container centering.\A 10:   // This means all your texts will be centered under all version of IE by default.\A 11:   // If your container does not have the .container class, don't forget to restore\A 12:   // the correct behavior to your main container (but not the body tag!)\A 13:   // Example:"; }

@@ -1,0 +1,39 @@
+%p#notice= notice
+
+%p
+  %b Rooms:
+  = @apartment.rooms
+%p
+  %b Internet:
+  = @apartment.internet
+%p
+  %b Washing machine:
+  = @apartment.washing_machine
+%p
+  %b Num persons:
+  = @apartment.num_persons
+%p
+  %b Price:
+  = @apartment.price
+%p
+  %b Conditioner:
+  = @apartment.conditioner
+%p
+  %b Tv:
+  = @apartment.tv
+%p
+  %b Balcony:
+  = @apartment.balcony
+%p
+  %b Ru address:
+  = @apartment.ru_address
+%p
+  %b Ro address:
+  = @apartment.ro_address
+%p
+  %b En address:
+  = @apartment.en_address
+
+= link_to 'Edit', edit_admin_apartment_path(@apartment)
+
+= link_to 'Back', admin_apartments_path

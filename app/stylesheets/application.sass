@@ -1,0 +1,298 @@
+@import 'compass/reset'
+@import "compass/utilities/lists"
+@import "compass/utilities/lists/bullets"
+
+
+@import 'blueprint'
+@mixin red_letter
+  font-family: Georgia, Times New Roman, serif
+  font-style: italic
+  font-weight: bold
+  color: red
+// применяем  +blueprint глобально, поэтому НЕ внутри описания элементов
++blueprint
+#header
+  padding: 10px 10px 0px 10px
+  height: 230px
+  .logo
+    display: block
+    float: left
+    margin-right: 20px
+    h1
+      margin-bottom: 0px
+      a
+        text-decoration: none
+        color: red
+        font-family: Helvetica, Arial, sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 40px
+        letter-spacing: normal
+        line-height: normal
+        text-transform: uppercase
+        text-decoration: none
+        text-align: left
+        letter-spacing: -2px
+        span
+          +red_letter
+          text-decoration: none
+          color: black
+          font-family: Helvetica, Arial, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 40px
+          letter-spacing: normal
+          line-height: normal
+          text-transform: uppercase
+          text-decoration: none
+          text-align: left
+          letter-spacing: -2px
+  .top_menu
+    float: right
+    ul.menu
+      padding-left: 0px
+      +no-bullets
+      li
+        a
+          font-family: Times New Roman, Times, serif
+          font-style: normal
+          font-weight: normal
+          font-size: 16px
+          letter-spacing: normal
+          line-height: normal
+          text-transform: none
+          text-decoration: none
+          text-align: left
+          color: black
+          span
+            font-family: Times New Roman, Times, serif
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            letter-spacing: normal
+            line-height: normal
+            text-transform: none
+            text-decoration: none
+            text-align: left
+            color: red
+
+          
+  .navigation
+    float: right
+    ul.lang_switch
+      +horizontal-list
+
+  .tel
+    float: right
+    table
+      width: 220px
+      font-size: 25px
+      padding-right: 10px
+      margin-bottom: 10px
+  #d_menu
+    width: 900px
+    margin: 0px auto
+    margin-top: 10px
+    background-image: url('/images/last_header.jpg')
+    height: 293px
+    display: block
+    clear: both
+    .for_border
+      height: 30px
+
+      border-top: 2px solid
+      border-top-color: #717171
+      .element
+        width: 300px
+        float: left
+        background-color: red
+        height: 30px
+        border: 1px
+
+        .title
+          position: relative
+          bottom: 0px
+          text-align: center
+          a
+            text-decoration: none
+            font-family: Tahoma, Verdana, sans-serif
+            font-style: normal
+            font-weight: bold
+            font-size: 20px
+            letter-spacing: normal
+            line-height: normal
+            text-transform: none
+            text-decoration: none
+            text-align: center
+            color: white
+        .helper
+          padding-top: 50px
+          display: none
+
+.content
+  width: 900px
+  margin: 0px auto
+  .two_columns
+    padding-top: 180px
+    margin-left: 10px
+    .left_column
+      width: 717px
+      float: left
+      h2
+        +red_letter
+        font-size: 30px
+        color: black
+        span
+          @include red_letter
+          font-size: 40px
+    .left_column_apartment
+      width: 900px
+      float: left
+      h2
+        +red_letter
+        font-size: 30px
+        color: black
+        span
+          @include red_letter
+          font-size: 40px
+      .apartment-description
+        width: 900px
+        .big-image
+          height: 316px
+          width: 416px
+          background-color: gray
+          margin: 0px
+          float: left
+          margin-bottom: 8px
+          margin-right: 10px
+        .description
+          padding-left: 0px
+          float: left
+          width: 320px
+          border-left: 0px
+          h3
+            a
+              font-family: Verdana, Geneva, sans-serif
+              font-style: normal
+              font-weight: bold
+              font-size: 16px
+              letter-spacing: normal
+              line-height: normal
+              text-decoration: none
+              text-align: left
+              color: gray
+          .param
+            ul
+              +no-bullets
+              padding-left: 0px
+              li
+
+          .price
+            clear: both
+            font-family: Verdana, Geneva, sans-serif
+            font-size: 25px
+            font-weight: bold
+            font-style: italic
+            span
+              +red_letter
+              font-size: 35px
+      .small-images
+        clear: both
+        margin-left: 0px
+        padding-left: 0px
+        margin-right: 0px
+        padding-right: 0px
+        margin-bottom: 20px
+        width: 450px
+        table
+          width: 416px
+          margin-left: 0px
+          padding-left: 0px
+          tr
+            td
+              padding-left: 0px
+              padding-right: 12px
+      .detailed-description
+        width: 450px
+        margin-top: 70px
+        margin-bottom: 30px
+        float: left
+        clear: both
+
+    .right_column
+      width: 180px
+      float: left
+      .block
+
+ul.apartments
+  +no-bullets
+  padding-left: 0px
+  li
+    clear: both
+    ul //columns
+      float: left
+
+      margin-bottom: 30px
+      margin-right: 20px
+      +no-bullets
+    .columns
+      width: 350px
+      border-left: 1px ridge black
+      border-bottom: 1px ridge black
+      padding-left: 8px
+    .description
+      padding-left: 0px
+      display: inline
+      float: left
+      width: 320px
+      border-left: 0px
+      h3
+        a
+          font-family: Verdana, Geneva, sans-serif
+          font-style: normal
+          font-weight: bold
+          font-size: 16px
+          letter-spacing: normal
+          line-height: normal
+          text-decoration: none
+          text-align: left
+          color: gray
+      .param
+        ul
+          padding-left: 0px
+      .price
+        clear: both
+        font-family: Verdana, Geneva, sans-serif
+        font-size: 25px
+        font-weight: bold
+        font-style: italic
+        span
+          +red_letter
+          font-size: 35px
+
+.footer_border
+  width: 100%
+  height: 5px
+  background-color: red
+  clear: both
+
+#footer
+  width: 100%
+  height: 100px
+  background-color: gray
+  clear: both
+
+  .menu
+    padding-top: 10px
+    span
+      margin-right: 20px
+
+      
+
+
+
+
+
+
+   
+  

@@ -1,0 +1,11 @@
+ro:
+  number_of_rooms: Camere
+  number_of_persons: Persoane
+  tv: TV
+  internet: Internet
+  washing_machine: Maşina de spălat
+  conditioner: Condiţioner
+  balcony: Balcon
+  id: ID
+  "true": "da"
+  "false": "nu"

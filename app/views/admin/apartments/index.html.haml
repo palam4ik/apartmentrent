@@ -1,0 +1,39 @@
+%h1 Listing apartments
+
+%table
+  %tr
+    %th Rooms
+    %th Internet
+    %th Washing machine
+    %th Num persons
+    %th Price
+    %th Conditioner
+    %th Tv
+    %th Balcony
+    %th Ru address
+    %th Ro address
+    %th En address
+    %th
+    %th
+    %th
+
+  - @apartments.each do |apartment|
+    %tr
+      %td= apartment.rooms
+      %td= apartment.internet
+      %td= apartment.washing_machine
+      %td= apartment.num_persons
+      %td= apartment.price
+      %td= apartment.conditioner
+      %td= apartment.tv
+      %td= apartment.balcony
+      %td= apartment.ru_address
+      %td= apartment.ro_address
+      %td= apartment.en_address
+      %td= link_to 'Show', [:admin, apartment] # admin_apartment(apartment)
+      %td= link_to 'Edit', edit_admin_apartment_path(apartment)
+      %td= link_to 'Destroy', [:admin, apartment], :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Apartment', new_admin_apartment_path

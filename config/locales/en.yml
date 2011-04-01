@@ -2,4 +2,13 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  number_of_rooms: Number of rooms
+  number_of_persons: Number of persons
+  tv: TV
+  internet: Internet
+  washing_machine: Washing machine
+  conditioner: Conditioner
+  balcony: Balcony
+  id: ID
+  "true": "yes"
+  "false": "no"

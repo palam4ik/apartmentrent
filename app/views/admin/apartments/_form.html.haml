@@ -1,0 +1,46 @@
+= form_for [:admin, @apartment] do |f|
+  -if @apartment.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@apartment.errors.count, "error")} prohibited this apartment from being saved:"
+      %ul
+        - @apartment.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :rooms
+    = f.text_field :rooms
+  .field
+    = f.label :internet
+    = f.check_box :internet
+  .field
+    = f.label :washing_machine
+    = f.check_box :washing_machine
+  .field
+    = f.label :num_persons
+    = f.text_field :num_persons
+  .field
+    = f.label :price
+    = f.text_field :price
+  .field
+    = f.label :conditioner
+    = f.check_box :conditioner
+  .field
+    = f.label :tv
+    = f.check_box :tv
+  .field
+    = f.label :balcony
+    = f.check_box :balcony
+  .field
+    = f.label :ru_address
+    = f.text_field :ru_address
+  .field
+    = f.label :ro_address
+    = f.text_field :ro_address
+  .field
+    = f.label :en_address
+    = f.text_field :en_address
+  .field
+    = f.label :special
+    = f.check_box :special
+  .actions
+    = f.submit 'Save'

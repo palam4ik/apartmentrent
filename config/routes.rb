@@ -1,60 +1,50 @@
 Apartments::Application.routes.draw do
+
+  namespace :admin do
+    resources :apartments
+  end
+
   devise_for :users
 
-  # The priority is based upon order of creation:
-  # first created -> highest priority.
-
-  # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
-  # Keep in mind you can assign values other than :controller and :action
-
-  # Sample of named route:
-  #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
-  # This route can be invoked with purchase_url(:id => product.id)
-
-  # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
-
-  # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
+  #resources:
+  # GET
+  # index -- /images
+  # show -- /images/:id
+  # new -- /images/new
+  # edit -- /images/:id/edit
   #
-  #     collection do
-  #       get 'sold'
-  #     end
-  #   end
+  # POST
+  # create -- /images
+  # update -- /images/:id?method=put | PUT
+  # destroy -- /images/:id?method=delete | DELETE
+#  resources :images, :except => :show
 
-  # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+  # /apartments/1
+  # /apartments/2
+  # /apartments/2/rooms?en=ru
+  # member & collection- additional routes we create
+#  match 'apartments/:number_of_rooms/rooms' => 'apartments#rooms'
 
-  # Sample resource route with more complex sub-resources
-  #   resources :products do
-  #     resources :comments
-  #     resources :sales do
-  #       get 'recent', :on => :collection
-  #     end
-  #   end
+  # collection:
+  # index, new, create
+  #
+  # member:
+  # edit, show, update, destroy --- need id
+  # you can use object
+  # apartments_url(object.id)
+  # link_to, redirect_to
+  # link object, redirect_to object
+  # link_to image, comment -- /images/:image_id/comment/:comment_id - GET
+  # link__to '', admin_apartments_url(object.id)
+  # link_to '', [:admin, object]
+  # link_to '', [image, comment]
 
-  # Sample resource route within a namespace:
-  #   namespace :admin do
-  #     # Directs /admin/products/* to Admin::ProductsController
-  #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
-  #   end
+  root :to => "welcome#index"
+  resources :apartments, :only => [:index, :show] do
+    member do
+      get 'rooms', :constraints => {:id => /[123]/}
+      
+    end
+  end
 
-  # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-  # root :to => "welcome#index"
-
-  # See how all your routes lay out with "rake routes"
-
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
 end

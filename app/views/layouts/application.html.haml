@@ -1,0 +1,33 @@
+!!!Strict
+%html
+  %title
+    Apartments
+  = javascript_include_tag 'jquery-1.5.min', 'application.js'
+  = stylesheet_link_tag 'compiled/application.css', 'columns.css'
+
+  %body
+    .content
+      = render 'shared/header'
+      = yield
+
+
+    .footer_border
+    #footer
+      %center
+        .menu
+          %span
+            %a{:href => '/contacts'}
+              Contacts
+          %span
+            %a{:href => '/other_service'}
+              Other Service
+          %span
+            %a{:href => '/terms'}
+              Terms and conditions
+          %span
+            %a{:href => '/about_us'}
+              About us
+
+        %br
+        © Apartmentrent 2008 -  
+        = Date.today.year

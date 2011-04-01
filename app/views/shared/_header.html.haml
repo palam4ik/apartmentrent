@@ -1,0 +1,77 @@
+#header
+  .logo
+    %h1
+      %a{:href => '/'}
+        :plain
+          <span>Apartment</span>rent
+    .slogan
+      Quickly and reliably
+
+  .navigation
+    %ul.lang_switch
+      - if I18n.locale == :ru
+        %li.active
+          Ru
+      - else
+        %li
+          %a{:href => root_url(:language => :ru)}
+            Ru
+
+      - if I18n.locale == :en
+        %li.active
+          En
+      - else
+        %li
+          %a{:href => '/'}
+            En
+
+      - if I18n.locale == :ro
+        %li.active
+          En
+      - else
+        %li
+          %a{:href => root_url(:language => :ro)}
+            Ro
+  .top_menu
+    %ul.menu
+      %li
+        %a{:href => '/contacts'}
+          :plain
+            <span>C</span>ontacts
+      %li
+        %a{:href => '/other_service'}
+          :plain
+            <span>O</span>ther service
+      %li
+        %a{:href => '/terms'}
+          :plain
+            <span>T</span>erms & <span>C</span>onditions
+      %li
+        %a{:href => '/about_us'}
+          :plain
+            <span>A</span>bout us
+
+
+  .tel
+    %table
+      %tr
+        %td
+          +373 69 179 847
+      %tr
+        %td
+          +373 69 179 847
+
+  #d_menu
+    .for_border
+      .element
+        .title
+          %a{:href => '/apartments/1/rooms'}
+            1-room
+      .element
+        .title
+          %a{:href => '/apartments/2/rooms'}
+            2-rooms
+      .element
+        .title
+          %a{:href => '/apartments/3/rooms'}
+            3-rooms

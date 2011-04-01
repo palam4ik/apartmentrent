@@ -1,0 +1,12 @@
+ru:
+  number_of_rooms: Количество комнат
+  number_of_persons: Количество персон
+  tv: TВ
+  internet: Интернет
+  conditioner: Кондиционер
+  balcony: Балкон
+  washing_machine: Стиральная машина    
+
+  id: Лот
+  "true": "да"
+  "false": "нет"

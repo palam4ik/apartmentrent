@@ -1,0 +1,62 @@
+%ul.apartments
+  - @apartments.each do |apartment|
+    %li
+      .four_images
+        %ul.columns
+          %li
+            %a{:href => '#'}
+              %img{:src => '/images/ap1.jpg', :alt => 'appartment', :width => 167}
+          %li
+            %a{:href => '#'}
+              %img{:src => '/images/ap2.jpg', :alt => 'appartment', :width => 167}
+          %li
+            %a{:href => '#'}
+              %img{:src => '/images/ap3.jpg', :alt => 'appartment', :width => 167}
+          %li
+            %a{:href => '#'}
+              %img{:src => '/images/ap4.jpg', :alt => 'appartment', :width => 167}
+
+      .description
+        %h3
+          %a{:href => '/apartment'}
+            = apartment.address
+        .param
+          %ul
+            %li
+              %strong
+                = t(:id) + ':'
+              = apartment.id
+
+            %li
+              %strong
+                = t(:number_of_rooms) + ':'
+              = apartment.rooms
+
+            %li
+              %strong
+                = t(:number_of_persons) + ':'
+              = apartment.num_persons
+            %li
+              %strong
+                = t(:tv) + ':'
+              = t apartment.tv
+            %li
+              %strong
+                = t(:internet) + ':'
+              = t apartment.internet
+            %li
+              %strong
+                = t(:washing_machine) + ':'
+              = t apartment.washing_machine
+            %li
+              %strong
+                = t(:conditioner) + ':'
+              = t apartment.conditioner
+            %li
+              %strong
+                = t(:balcony) + ':'
+              = t apartment.balcony.to_s
+        .price
+          %span
+            €
+          = apartment.price

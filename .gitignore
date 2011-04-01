@@ -2,3 +2,18 @@
 db/*.sqlite3
 log/*.log
 tmp/
+
+# Temporary files of every sort
+.DS_Store
+.idea
+.rvmrc
+.stgit*
+*.swap
+*.swo
+*.swp
+*~
+bin/*
+nbproject
+patches-*
+capybara-*.html
+dump.rdb

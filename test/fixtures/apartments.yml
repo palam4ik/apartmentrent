@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  rooms: 1
+  internet: false
+  washing_machine: false
+  num_persons: 1
+  price: 1
+  conditioner: false
+  tv: false
+  balcony: false
+  ru_address: MyString
+  ro_address: MyString
+  en_address: MyString
+
+two:
+  rooms: 1
+  internet: false
+  washing_machine: false
+  num_persons: 1
+  price: 1
+  conditioner: false
+  tv: false
+  balcony: false
+  ru_address: MyString
+  ro_address: MyString
+  en_address: MyString
