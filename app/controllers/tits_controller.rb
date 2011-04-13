@@ -1,0 +1,2 @@
+class TitsController < ApplicationController
+end

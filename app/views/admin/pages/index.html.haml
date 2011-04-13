@@ -1,0 +1,31 @@
+%h1 Listing pages
+
+%table
+  %tr
+    %th Url
+    %th Ro title
+    %th Ru title
+    %th En title
+    %th Ru body
+    %th En body
+    %th Ro body
+    %th
+    %th
+    %th
+
+  - @pages.each do |page|
+    %tr
+      %td= page.url
+      %td= page.ro_title
+      %td= page.ru_title
+      %td= page.en_title
+      %td= page.ru_body
+      %td= page.en_body
+      %td= page.ro_body
+      %td= link_to 'Show', admin_page_path(page.id)
+      %td= link_to 'Edit', edit_admin_page_path(page)
+      %td= link_to 'Destroy', admin_page_path(page.id), :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Page', new_admin_page_path

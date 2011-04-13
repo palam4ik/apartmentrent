@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  url: MyString
+  ro_title: MyString
+  ru_title: MyString
+  en_title: MyString
+  ru_body: MyText
+  en_body: MyText
+  ro_body: MyText
+
+two:
+  url: MyString
+  ro_title: MyString
+  ru_title: MyString
+  en_title: MyString
+  ru_body: MyText
+  en_body: MyText
+  ro_body: MyText
