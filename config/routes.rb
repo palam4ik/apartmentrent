@@ -1,7 +1,9 @@
 Apartments::Application.routes.draw do
 
+
   namespace :admin do
     resources :apartments
+    resources :pages 
   end
 
   devise_for :users
@@ -24,7 +26,6 @@ Apartments::Application.routes.draw do
   # /apartments/2/rooms?en=ru
   # member & collection- additional routes we create
 #  match 'apartments/:number_of_rooms/rooms' => 'apartments#rooms'
-
   # collection:
   # index, new, create
   #
@@ -38,13 +39,17 @@ Apartments::Application.routes.draw do
   # link__to '', admin_apartments_url(object.id)
   # link_to '', [:admin, object]
   # link_to '', [image, comment]
-
   root :to => "welcome#index"
+#  resources :tits, :only => :index
+
   resources :apartments, :only => [:index, :show] do
     member do
       get 'rooms', :constraints => {:id => /[123]/}
       
     end
   end
+  # 50 в самый низ
+  match '/:url' => 'pages#show'
+
 
 end

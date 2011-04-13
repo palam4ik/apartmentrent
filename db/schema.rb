@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110324205920) do
+ActiveRecord::Schema.define(:version => 20110403191122) do
 
   create_table "apartments", :force => true do |t|
     t.integer  "rooms",           :default => 1
@@ -27,6 +27,18 @@ ActiveRecord::Schema.define(:version => 20110324205920) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "special",         :default => false
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "url"
+    t.string   "ro_title"
+    t.string   "ru_title"
+    t.string   "en_title"
+    t.text     "ru_body"
+    t.text     "en_body"
+    t.text     "ro_body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

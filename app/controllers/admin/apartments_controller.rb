@@ -63,9 +63,8 @@ class Admin::ApartmentsController < ::AdminController
     @apartment = Apartment.find(params[:id])
     @apartment.destroy
 
-    respond_to do |format|
-      format.html { redirect_to(apartments_url) }
-      format.xml  { head :ok }
-    end
+
+    redirect_to(admin_apartments_url)
+
   end
 end

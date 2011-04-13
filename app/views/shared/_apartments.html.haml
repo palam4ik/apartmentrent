@@ -18,8 +18,7 @@
 
       .description
         %h3
-          %a{:href => '/apartment'}
-            = apartment.address
+          = link_to apartment.address, "/apartments/#{apartment.id}" # apartments_path(apartment.id)
         .param
           %ul
             %li
