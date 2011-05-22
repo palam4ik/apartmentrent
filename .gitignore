@@ -2,7 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
-db/schema.rb 
+db/schema.rb
 
 # Temporary files of every sort
 .DS_Store
