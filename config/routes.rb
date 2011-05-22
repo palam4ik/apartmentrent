@@ -3,7 +3,7 @@ Apartments::Application.routes.draw do
 
   namespace :admin do
     resources :apartments
-    resources :pages 
+    resources :pages
   end
 
   devise_for :users

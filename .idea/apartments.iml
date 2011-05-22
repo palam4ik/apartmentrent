@@ -40,6 +40,12 @@
       </requirement>
       <source from="Gemfile" />
     </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="simple_form" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="Gemfile" />
+    </requirement>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
@@ -79,6 +85,7 @@
     <orderEntry type="library" scope="PROVIDED" name="[gem] warden (v1.0.3, /home/palam4ik/.rvm/gems/ruby-1.9.2-p136/gems/warden-1.0.3)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] haml (v3.0.25, /home/palam4ik/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] bcrypt-ruby (v2.1.4, /home/palam4ik/.rvm/gems/ruby-1.9.2-p136/gems/bcrypt-ruby-2.1.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] simple_form (v1.3.1, /home/palam4ik/.rvm/gems/ruby-1.9.2-p136/gems/simple_form-1.3.1)" level="application" />
   </component>
 </module>
 

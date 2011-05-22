@@ -10,23 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110403191122) do
+ActiveRecord::Schema.define(:version => 20110413190216) do
 
   create_table "apartments", :force => true do |t|
-    t.integer  "rooms",           :default => 1
-    t.boolean  "internet",        :default => true
-    t.boolean  "washing_machine", :default => true
-    t.integer  "num_persons",     :default => 1
+    t.integer  "rooms",                :default => 1
+    t.boolean  "internet",             :default => true
+    t.boolean  "washing_machine",      :default => true
+    t.integer  "num_persons",          :default => 1
     t.integer  "price"
-    t.boolean  "conditioner",     :default => true
-    t.boolean  "tv",              :default => true
-    t.boolean  "balcony",         :default => true
+    t.boolean  "conditioner",          :default => true
+    t.boolean  "tv",                   :default => true
+    t.boolean  "balcony",              :default => true
     t.string   "ru_address"
     t.string   "ro_address"
     t.string   "en_address"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "special",         :default => false
+    t.boolean  "special",              :default => false
+    t.text     "detailed_description"
   end
 
   create_table "pages", :force => true do |t|

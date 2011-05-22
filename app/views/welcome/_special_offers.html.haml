@@ -1,4 +1,10 @@
 %h2
-  :plain
-    <span>S</span>pecial offers
+  -a = t (:special_offers).to_s
+  %span
+    = a.chr
+  = a.slice(1..30)
+
+
+  -#:plain
+  -#  <span>S</span>pecial offers
 = render 'shared/apartments'

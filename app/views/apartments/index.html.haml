@@ -3,8 +3,10 @@
     %h2
       %span
         = params[:id]
-      room apartment
-
+      -if params[:id] == 1
+      = t :room_apartment
+      -#-else
+      -#= t :rooms_apartment
 
     = render 'shared/apartments'
 .right_column

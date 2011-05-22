@@ -32,3 +32,4 @@ gem 'mysql2'
 gem "devise"
 gem "haml", ">= 3.0.0"
 gem "haml-rails"
+gem "simple_form"

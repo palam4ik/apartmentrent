@@ -1,8 +1,10 @@
 !!!Strict
 %html
+  %head
+  = page_title
   %title
-    Apartments
-  = javascript_include_tag 'jquery-1.5.min', 'rails', 'application'
+
+  = javascript_include_tag 'jquery-1.5.min', 'rails', 'application' 
   = stylesheet_link_tag 'compiled/application.css', 'columns.css'
 
   %body
@@ -22,7 +24,7 @@
             %a{:href => '/other_service'}
               Other Service
           %span
-            %a{:href => '/terms'}
+            %a{:href => '/terms_and_conditions'}
               Terms and conditions
           %span
             %a{:href => '/about_us'}
