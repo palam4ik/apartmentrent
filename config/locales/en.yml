@@ -12,3 +12,10 @@ en:
   id: ID
   "true": "yes"
   "false": "no"
+  special_offers: "Special offers"
+  contacts: "Contacts"
+  about_us: "About us"
+  other_service: "Other service"
+  terms_and_conditions: "Terms & Conditions"
+  rooms_apartment: "rooms apartment"
+  room_apartment: "room apartment"

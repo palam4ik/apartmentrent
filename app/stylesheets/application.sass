@@ -1,7 +1,7 @@
 @import 'compass/reset'
 @import "compass/utilities/lists"
 @import "compass/utilities/lists/bullets"
-
+@import "compass/css3/border-radius"
 
 @import 'blueprint'
 @mixin red_letter
@@ -98,16 +98,17 @@
     display: block
     clear: both
     .for_border
+
       height: 30px
 
       border-top: 2px solid
       border-top-color: #717171
       .element
+        +border-radius
         width: 300px
         float: left
-        background-color: red
+        background-color: gray
         height: 30px
-        border: 1px
 
         .title
           position: relative
@@ -218,6 +219,13 @@
         margin-bottom: 30px
         float: left
         clear: both
+        height: 50px
+
+    .additional-border
+      width: 600px
+      height: 10px
+      color: black
+      clear: both
 
     .right_column
       width: 180px

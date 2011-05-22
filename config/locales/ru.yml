@@ -10,3 +10,10 @@ ru:
   id: Лот
   "true": "да"
   "false": "нет"
+  special_offers: "Специальные предложения"
+  contacts: "Контакты"
+  about_us: "О нас "
+  other_service: "Услуги"
+  terms_and_conditions: "Условия"
+  rooms_apartment: "комнатные квартиры"
+  room_apartment: "комнатные квартиры"

@@ -12,7 +12,7 @@ class CreateApartments < ActiveRecord::Migration
       t.string :ru_address
       t.string :ro_address
       t.string :en_address
-
+      t.
       t.timestamps
     end
   end

@@ -9,3 +9,10 @@ ro:
   id: ID
   "true": "da"
   "false": "nu"
+  special_offers: "Oferte speciale"
+  contacts: "Contacte"
+  about_us: "Despre noi"
+  other_service: "Alte Serviciile"
+  terms_and_conditions: "Condiţiile"
+  rooms_apartment: "camere"
+  room_apartment: "camera"

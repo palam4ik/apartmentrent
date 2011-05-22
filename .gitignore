@@ -2,6 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/
+db/schema.rb 
 
 # Temporary files of every sort
 .DS_Store
@@ -17,3 +18,5 @@ nbproject
 patches-*
 capybara-*.html
 dump.rdb
+Gemfile.lock
+.idea/
