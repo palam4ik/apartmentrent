@@ -14,11 +14,10 @@ class ApplicationController < ActionController::Base
     
     redirect_to root_url unless %w(ru ro en).include? I18n.locale.to_s
   end
-
-  def default_url_options(options={})
-  logger.debug "default_url_options is passed options: #{options.inspect}\n"
-  { :locale => I18n.locale }
-end
+#
+#  def default_url_options(options={})
+#    { :language => I18n.locale } # if I18n.locale != :en
+#  end
 
 end
 

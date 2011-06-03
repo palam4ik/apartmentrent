@@ -3,6 +3,7 @@ db/*.sqlite3
 log/*.log
 tmp/
 db/schema.rb
+public/photos/
 
 # Temporary files of every sort
 .DS_Store

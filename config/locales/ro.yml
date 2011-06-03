@@ -7,6 +7,7 @@ ro:
   conditioner: Condiţioner
   balcony: Balcon
   id: ID
+  apartment_id: "Apartamentul ID %{id}"
   "true": "da"
   "false": "nu"
   special_offers: "Oferte speciale"
@@ -16,3 +17,7 @@ ro:
   terms_and_conditions: "Condiţiile"
   rooms_apartment: "camere"
   room_apartment: "camera"
+  slogan: "Repede si "
+  one_room: "O camera"
+  two_rooms: "Doua camere"
+  three_rooms: "Trei camere"

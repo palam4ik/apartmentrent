@@ -1,4 +1,4 @@
-class Admin::PagesController < ApplicationController
+class Admin::PagesController < ::AdminController
   # GET /pages
   # GET /pages.xml
   def index

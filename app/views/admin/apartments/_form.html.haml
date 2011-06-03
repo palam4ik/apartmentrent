@@ -42,5 +42,40 @@
   .field
     = f.label :special
     = f.check_box :special
+  .field
+    = f.label :en_description
+    = f.text_area :en_description
+  .field
+    = f.label :ru_description
+    = f.text_area :ru_description
+  .field
+    = f.label :ro_description
+    = f.text_area :ro_description
   .actions
     = f.submit 'Save'
+
+- unless @apartment.new_record?
+  = form_for @photo, :html => {:multipart => true} do |f|
+    - if @photo.errors.any?
+      #error_explanation
+        %h2
+          = pluralize(@photo.errors.count, "error")
+          prohibited this photo from being saved:
+        %ul
+          - @photo.errors.full_messages.each do |msg|
+            %li= msg
+    .field
+      = f.label :photo_order
+      %br
+      = f.text_field :photo_order
+    .field
+      = f.label :apartment_id
+      %br
+      = f.text_field :apartment_id
+    .field
+      = f.label :file
+      %br
+      = f.file_field :file
+    .actions
+      = f.submit
+

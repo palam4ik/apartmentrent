@@ -1,12 +1,13 @@
 .two_columns
   .left_column
+    -#= red_h2 params[:id] == 1
     %h2
       %span
         = params[:id]
-      -if params[:id] == 1
-      = t :room_apartment
-      -#-else
-      -#= t :rooms_apartment
+      - if params[:id] == '1'
+        = t :room_apartment
+      - else
+        = t :rooms_apartment
 
     = render 'shared/apartments'
 .right_column

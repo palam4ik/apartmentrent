@@ -1,34 +1,29 @@
 !!!Strict
 %html
   %head
-  = page_title
   %title
 
   = javascript_include_tag 'jquery-1.5.min', 'rails', 'application' 
-  = stylesheet_link_tag 'compiled/application.css', 'columns.css'
+  = stylesheet_link_tag 'application', 'columns'
 
   %body
     .content
       = render 'shared/header'
       = yield
 
-
+    %div(style="clear:both")
     .footer_border
     #footer
       %center
         .menu
           %span
-            %a{:href => '/contacts'}
-              Contacts
+            = i18n_link_to t(:contacts), '/contacts'
           %span
-            %a{:href => '/other_service'}
-              Other Service
+            = i18n_link_to t(:other_service), '/other_service'
           %span
-            %a{:href => '/terms_and_conditions'}
-              Terms and conditions
+            = i18n_link_to t(:terms_and_conditions), '/terms_and_conditions'
           %span
-            %a{:href => '/about_us'}
-              About us
+            = i18n_link_to t(:about_us), '/about_us'
 
         %br
         © Apartmentrent 2008 -  

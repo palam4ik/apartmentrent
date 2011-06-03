@@ -3,22 +3,14 @@
     %li
       .four_images
         %ul.columns
-          %li
-            %a{:href => '#'}
-              %img{:src => '/images/ap1.jpg', :alt => 'appartment', :width => 167}
-          %li
-            %a{:href => '#'}
-              %img{:src => '/images/ap2.jpg', :alt => 'appartment', :width => 167}
-          %li
-            %a{:href => '#'}
-              %img{:src => '/images/ap3.jpg', :alt => 'appartment', :width => 167}
-          %li
-            %a{:href => '#'}
-              %img{:src => '/images/ap4.jpg', :alt => 'appartment', :width => 167}
+          - Photo.where(:apartment_id => apartment.id).limit(4).all.each do |photo|
+            %li
+              = image_tag photo.file.thumb.url, :width => 167, :height => 125
+
 
       .description
         %h3
-          = link_to apartment.address, "/apartments/#{apartment.id}" # apartments_path(apartment.id)
+          = i18n_link_to apartment.address, "/apartments/#{apartment.id}" # apartments_path(apartment.id)
         .param
           %ul
             %li

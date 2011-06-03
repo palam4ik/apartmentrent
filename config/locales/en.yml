@@ -10,6 +10,7 @@ en:
   conditioner: Conditioner
   balcony: Balcony
   id: ID
+  apartment_id: "Apartment ID %{id}"
   "true": "yes"
   "false": "no"
   special_offers: "Special offers"
@@ -17,5 +18,9 @@ en:
   about_us: "About us"
   other_service: "Other service"
   terms_and_conditions: "Terms & Conditions"
-  rooms_apartment: "rooms apartment"
-  room_apartment: "room apartment"
+  rooms_apartment: "rooms apartments"
+  room_apartment: "room apartments"
+  slogan: "Quickly and reliably"
+  one_room: "One room"
+  two_rooms: "Two rooms"
+  three_rooms: "Three rooms"

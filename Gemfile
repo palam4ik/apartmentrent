@@ -1,7 +1,9 @@
 source 'http://rubygems.org'
+source 'http://gemcutter.org'
 
 gem 'rake', '0.8.7'
 gem 'rails', '3.0.4'
+gem 'compass'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -31,6 +33,8 @@ gem 'mysql'
 #   gem 'webrat'
 # end
 gem "devise"
-gem "haml", ">= 3.0.0"
-gem "haml-rails"
+gem "haml", ">= 3.2.0.alpha3"
+#gem "haml-rails"
 gem "simple_form"
+gem "carrierwave"
+gem "rmagick"

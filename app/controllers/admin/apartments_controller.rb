@@ -23,6 +23,7 @@ class Admin::ApartmentsController < ::AdminController
   # GET /apartments/1/edit
   def edit
     @apartment = Apartment.find(params[:id])
+    @photo = Photo.new
   end
 
   # POST /apartments

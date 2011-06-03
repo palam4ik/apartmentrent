@@ -5,7 +5,7 @@
         :plain
           <span>Apartment</span>rent
     .slogan
-      Quickly and reliably
+      = t(:slogan)
 
   .navigation
     %ul.lang_switch
@@ -14,42 +14,31 @@
           Ru
       - else
         %li
-          %a{:href => root_url(:language => :ru)}
-            Ru
+          = link_to 'Ru', '/?language=ru'#root_url
 
       - if I18n.locale == :en
         %li.active
           En
       - else
         %li
-          %a{:href => '/'}
-            En
+          = link_to 'En', '/'#root_url
 
       - if I18n.locale == :ro
         %li.active
-          En
+          Ro
       - else
         %li
-          %a{:href => root_url(:language => :ro)}
-            Ro
+          = link_to 'Ro', '/?language=ro'#root_url
   .top_menu
     %ul.menu
       %li
-        %a{:href => '/contacts'}
-          :plain
-            <span>C</span>ontacts
+        = i18n_link_to first_red_letter(t(:contacts)), '/contacts'
       %li
-        %a{:href => '/other_service'}
-          :plain
-            <span>O</span>ther service
+        = i18n_link_to first_red_letter(t(:other_service)), '/other_service'
       %li
-        %a{:href => '/terms_and_conditions'}
-          :plain
-            <span>T</span>erms & <span>C</span>onditions
+        = i18n_link_to first_red_letter(t(:terms_and_conditions)), '/terms_and_conditions'
       %li
-        %a{:href => '/about_us'}
-          :plain
-            <span>A</span>bout us
+        = i18n_link_to first_red_letter(t(:about_us)), '/about_us'
 
 
   .tel
@@ -65,13 +54,11 @@
     .for_border
       .element
         .title
-          %a{:href => '/apartments/1/rooms'}
-            1-room
+          = i18n_link_to t(:one_room),'/apartments/1/rooms'
+
       .element
         .title
-          %a{:href => '/apartments/2/rooms'}
-            2-rooms
+          = i18n_link_to t(:two_rooms), '/apartments/2/rooms'
       .element
         .title
-          %a{:href => '/apartments/3/rooms'}
-            3-rooms
+          = i18n_link_to t(:three_rooms), '/apartments/3/rooms'

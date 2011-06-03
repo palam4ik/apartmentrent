@@ -1,32 +1,19 @@
 .two_columns
   .left_column_apartment
-    %h2
-      :plain
-        <span>A</span>partment ID
-
+    = red_h2 t(:apartment_id, :id => @apartment.id)
     .apartment-description
       .big-image
-        %img(src="/images/ap2_1.jpg" width="416" height="316")
+        = image_tag @apartment.photos.first.file.url, :width => 416, :height => 316
         .small-images
           %table
             %tr
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
+              - Photo.where(:apartment_id => @apartment.id).limit(4).all.each do |photo|
+                %td
+                  = image_tag photo.file.thumb.url, :width => 95, :height => 71
             %tr
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
-              %td
-                %img{:src => "/images/ap2_1.jpg", :width => 95, :height => 71}
+              - Photo.where(:apartment_id => @apartment.id).limit(4).offset(4).all.each do |photo|
+                %td
+                  = image_tag photo.file.thumb.url, :width => 95, :height => 71
 
       .description
         %h3
@@ -37,41 +24,47 @@
             %li
               %strong
                 ID:
-              0001
+              = @apartment.id
             %li
               %strong
                 Number of rooms:
-              1
+              = @apartment.rooms
             %li
               %strong
                 Number of persons:
-              2
+              = @apartment.num_persons
             %li
               %strong
                 TV:
-              yes
+              = t @apartment.tv
             %li
               %strong
                 Internet:
-              yes
+              = t @apartment.internet
             %li
               %strong
                 Washing machine:
-              yes
+              = t @apartment.washing_machine
             %li
               %strong
                 Conditioner:
-              yes
+              = t @apartment.conditioner
             %li
               %strong
                 Balcony:
-              yes
+              = t @apartment.conditioner
         .price
           %span
             €
           60
         .detailed-description
-          = Apartment.where(:detailed_description => params[:id])
+          -#- if I18n.locale == :en
+          -#  = @apartment.en_description
+          -#- if I18n.locale == :ro
+          -#  = @apartment.ro_description
+          -#- if I18n.locale == :ru
+          -#  = @apartment.ru_description
+          =  @apartment.description
 
       .additional-border
 

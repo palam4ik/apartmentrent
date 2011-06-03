@@ -8,7 +8,7 @@
   font-family: Georgia, Times New Roman, serif
   font-style: italic
   font-weight: bold
-  color: red
+  color: #EF3124
 // применяем  +blueprint глобально, поэтому НЕ внутри описания элементов
 +blueprint
 #header
@@ -22,7 +22,7 @@
       margin-bottom: 0px
       a
         text-decoration: none
-        color: red
+        color: #EF3124
         font-family: Helvetica, Arial, sans-serif
         font-style: normal
         font-weight: bold
@@ -74,7 +74,7 @@
             text-transform: none
             text-decoration: none
             text-align: left
-            color: red
+            color: #EF3124
 
           
   .navigation
@@ -101,15 +101,13 @@
 
       height: 30px
 
-      border-top: 2px solid
-      border-top-color: #717171
       .element
         +border-radius
-        width: 300px
+        width: 295px
         float: left
-        background-color: gray
+        background-color: #EF3124
         height: 30px
-
+        margin-left: 4px
         .title
           position: relative
           bottom: 0px
@@ -137,7 +135,7 @@
     padding-top: 180px
     margin-left: 10px
     .left_column
-      width: 717px
+      width: 710px
       float: left
       h2
         +red_letter
@@ -158,6 +156,7 @@
           font-size: 40px
       .apartment-description
         width: 900px
+        margin-bottom: 90px
         .big-image
           height: 316px
           width: 416px
@@ -213,6 +212,8 @@
             td
               padding-left: 0px
               padding-right: 12px
+              width: 100px
+              height: 80px
       .detailed-description
         width: 450px
         margin-top: 70px
@@ -252,7 +253,7 @@ ul.apartments
       padding-left: 0px
       display: inline
       float: left
-      width: 320px
+      width: 290px
       border-left: 0px
       h3
         a
@@ -281,13 +282,13 @@ ul.apartments
 .footer_border
   width: 100%
   height: 5px
-  background-color: red
+  background-color: #EF3124
   clear: both
 
 #footer
   width: 100%
   height: 100px
-  background-color: gray
+  background-color: #D1D5D8
   clear: both
 
   .menu

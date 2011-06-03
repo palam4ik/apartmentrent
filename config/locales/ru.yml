@@ -8,6 +8,7 @@ ru:
   washing_machine: Стиральная машина    
 
   id: Лот
+  apartment_id: "Лот № %{id}"
   "true": "да"
   "false": "нет"
   special_offers: "Специальные предложения"
@@ -17,3 +18,7 @@ ru:
   terms_and_conditions: "Условия"
   rooms_apartment: "комнатные квартиры"
   room_apartment: "комнатные квартиры"
+  slogan: "Быстро и надёжно"
+  one_room: "Однокомнатные"
+  two_rooms: "Двухкомнатные"
+  three_rooms: "Трёхкомнатные"

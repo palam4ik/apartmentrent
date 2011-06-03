@@ -30,6 +30,9 @@
       %td= apartment.ru_address
       %td= apartment.ro_address
       %td= apartment.en_address
+      %td= apartment.ru_description
+      %td= apartment.ro_description
+      %td= apartment.en_description
       %td= link_to 'Show', [:admin, apartment] # admin_apartment(apartment)
       %td= link_to 'Edit', edit_admin_apartment_path(apartment)
       %td= link_to 'Destroy', [:admin, apartment], :confirm => 'Are you sure?', :method => :delete

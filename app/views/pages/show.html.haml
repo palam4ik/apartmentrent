@@ -1,25 +1,8 @@
 .two_columns
   .left_column
-    %h2
-      - if params[:url]== "contacts"
-        -a = t (:contacts).to_s
-      -if params[:url]== "about_us"
-        -a = t (:about_us).to_s
-      -if params[:url]== "terms_and_conditions"
-        -a = t (:terms_and_conditions).to_s
-      -if params[:url]== "other_service"
-        -a = t (:other_service).to_s
+    = red_h2 @page.title
+    = @page.body
 
-
-      %span
-        = a.chr
-      = a.slice(1..30)
-
-
-
-
-
-    = @page.ru_body
 
   .right_column
     = render 'shared/right_column'

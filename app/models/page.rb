@@ -6,6 +6,27 @@ class Page < ActiveRecord::Base
 
   
   def body
-    self.send "#{I18n.locale.to_s}_body"
+    send "#{I18n.locale.to_s}_body"
+  end
+
+
+  def ro_title
+    super.force_encoding 'UTF-8'
+  end
+
+  def ru_title
+    super.force_encoding 'UTF-8'
+  end
+
+  def ro_body
+    super.force_encoding 'UTF-8'
+  end
+
+  def ru_body
+    super.force_encoding 'UTF-8'
+  end
+
+  def title
+    send "#{I18n.locale.to_s}_title"
   end
 end

@@ -1,9 +1,12 @@
 Apartments::Application.routes.draw do
 
 
+  resources :photos
+
   namespace :admin do
     resources :apartments
     resources :pages
+    root :to => "apartments#index"
   end
 
   devise_for :users
