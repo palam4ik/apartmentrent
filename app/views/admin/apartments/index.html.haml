@@ -1,41 +1,50 @@
 %h1 Listing apartments
 
-%table
+%table(cellpadding="20")
   %tr
-    %th Rooms
-    %th Internet
-    %th Washing machine
-    %th Num persons
-    %th Price
-    %th Conditioner
-    %th Tv
-    %th Balcony
-    %th Ru address
-    %th Ro address
-    %th En address
-    %th
-    %th
-    %th
+    %th ADDRESS
+    %th Description
+    %th Params
+    %th Photos
+    %th Actions
 
   - @apartments.each do |apartment|
     %tr
-      %td= apartment.rooms
-      %td= apartment.internet
-      %td= apartment.washing_machine
-      %td= apartment.num_persons
-      %td= apartment.price
-      %td= apartment.conditioner
-      %td= apartment.tv
-      %td= apartment.balcony
-      %td= apartment.ru_address
-      %td= apartment.ro_address
-      %td= apartment.en_address
-      %td= apartment.ru_description
-      %td= apartment.ro_description
-      %td= apartment.en_description
-      %td= link_to 'Show', [:admin, apartment] # admin_apartment(apartment)
-      %td= link_to 'Edit', edit_admin_apartment_path(apartment)
-      %td= link_to 'Destroy', [:admin, apartment], :confirm => 'Are you sure?', :method => :delete
+      %td
+        = apartment.ru_address
+        %br
+        %br
+        = apartment.en_address
+        %br
+        %br
+        = apartment.ro_address
+      %td
+        = apartment.ru_description
+        %br
+        %br
+        = apartment.ro_description
+        %br
+        %br
+        = apartment.en_description
+      %td
+        = apartment.rooms
+        = apartment.internet
+        = apartment.washing_machine
+        = apartment.num_persons
+      %td
+        - count = apartment.photos.count
+        - if count == 0
+          No photos
+        - else
+          Total photos:
+          = count
+          %br
+          - apartment.photos.each do |photo|
+            = image_tag photo.file.thumb.url, :width => 50
+      %td
+        = link_to 'Show', [:admin, apartment] # admin_apartment(apartment)
+        = link_to 'Edit', edit_admin_apartment_path(apartment)
+        = link_to 'Destroy', [:admin, apartment], :confirm => 'Are you sure?', :method => :delete
 
 %br
 

@@ -17,7 +17,7 @@ class Admin::ApartmentsController < ::AdminController
   # GET /apartments/new.xml
   def new
     @apartment = Apartment.new
-
+    @apartment.photos.build
   end
 
   # GET /apartments/1/edit

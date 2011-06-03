@@ -1,5 +1,6 @@
 class Apartment < ActiveRecord::Base
-  has_many :photos
+  has_many :photos, :dependent => :destroy
+  accepts_nested_attributes_for :photos
 
   # apartment.send I18.locale.to_s + '_address'
   # модель apartment-объеет, a en_address- название столбца в таблице
