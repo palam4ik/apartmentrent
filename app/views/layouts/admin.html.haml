@@ -1,10 +1,11 @@
 !!!Strict
 %html
-  = javascript_include_tag 'jquery-1.5.min', 'rails', 'application'
+  = javascript_include_tag 'jquery-1.5.min', 'rails'
   %body
     .menu
       = link_to 'Pages','/admin/pages'
       = link_to 'Apartments','/admin/apartments'
+      -#= current_user.email
     = yield
 
 

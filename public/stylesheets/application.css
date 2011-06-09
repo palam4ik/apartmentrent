@@ -1512,7 +1512,18 @@ textarea {
   width: 320px;
   border-left: 0px;
 }
-/* line 174, ../../app/stylesheets/application.sass */
+/* line 173, ../../app/stylesheets/application.sass */
+.content .two_columns .left_column_apartment .apartment-description .description h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: normal;
+  line-height: normal;
+  text-align: left;
+  color: gray;
+}
+/* line 182, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description h3 a {
   font-family: Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -1524,7 +1535,7 @@ textarea {
   text-align: left;
   color: gray;
 }
-/* line 185, ../../app/stylesheets/application.sass */
+/* line 193, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .param ul {
   list-style: none;
   padding-left: 0px;
@@ -1535,7 +1546,7 @@ textarea {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 190, ../../app/stylesheets/application.sass */
+/* line 198, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .price {
   clear: both;
   font-family: Verdana, Geneva, sans-serif;
@@ -1543,7 +1554,7 @@ textarea {
   font-weight: bold;
   font-style: italic;
 }
-/* line 196, ../../app/stylesheets/application.sass */
+/* line 204, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .price span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1551,7 +1562,7 @@ textarea {
   color: #ef3124;
   font-size: 35px;
 }
-/* line 199, ../../app/stylesheets/application.sass */
+/* line 207, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images {
   clear: both;
   margin-left: 0px;
@@ -1561,20 +1572,20 @@ textarea {
   margin-bottom: 20px;
   width: 450px;
 }
-/* line 207, ../../app/stylesheets/application.sass */
+/* line 215, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images table {
   width: 416px;
   margin-left: 0px;
   padding-left: 0px;
 }
-/* line 212, ../../app/stylesheets/application.sass */
+/* line 220, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images table tr td {
   padding-left: 0px;
   padding-right: 12px;
   width: 100px;
   height: 80px;
 }
-/* line 217, ../../app/stylesheets/application.sass */
+/* line 225, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .detailed-description {
   width: 450px;
   margin-top: 70px;
@@ -1583,20 +1594,20 @@ textarea {
   clear: both;
   height: 50px;
 }
-/* line 225, ../../app/stylesheets/application.sass */
+/* line 233, ../../app/stylesheets/application.sass */
 .content .two_columns .additional-border {
   width: 600px;
   height: 10px;
   color: black;
   clear: both;
 }
-/* line 231, ../../app/stylesheets/application.sass */
+/* line 239, ../../app/stylesheets/application.sass */
 .content .two_columns .right_column {
   width: 180px;
   float: left;
 }
 
-/* line 236, ../../app/stylesheets/application.sass */
+/* line 244, ../../app/stylesheets/application.sass */
 ul.apartments {
   list-style: none;
   padding-left: 0px;
@@ -1607,11 +1618,11 @@ ul.apartments li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 239, ../../app/stylesheets/application.sass */
+/* line 247, ../../app/stylesheets/application.sass */
 ul.apartments li {
   clear: both;
 }
-/* line 241, ../../app/stylesheets/application.sass */
+/* line 249, ../../app/stylesheets/application.sass */
 ul.apartments li ul {
   float: left;
   margin-bottom: 30px;
@@ -1624,14 +1635,14 @@ ul.apartments li ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 247, ../../app/stylesheets/application.sass */
+/* line 255, ../../app/stylesheets/application.sass */
 ul.apartments li .columns {
   width: 350px;
   border-left: 1px ridge black;
   border-bottom: 1px ridge black;
   padding-left: 8px;
 }
-/* line 252, ../../app/stylesheets/application.sass */
+/* line 260, ../../app/stylesheets/application.sass */
 ul.apartments li .description {
   padding-left: 0px;
   display: inline;
@@ -1639,7 +1650,7 @@ ul.apartments li .description {
   width: 290px;
   border-left: 0px;
 }
-/* line 259, ../../app/stylesheets/application.sass */
+/* line 267, ../../app/stylesheets/application.sass */
 ul.apartments li .description h3 a {
   font-family: Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -1651,11 +1662,11 @@ ul.apartments li .description h3 a {
   text-align: left;
   color: gray;
 }
-/* line 270, ../../app/stylesheets/application.sass */
+/* line 278, ../../app/stylesheets/application.sass */
 ul.apartments li .description .param ul {
   padding-left: 0px;
 }
-/* line 272, ../../app/stylesheets/application.sass */
+/* line 280, ../../app/stylesheets/application.sass */
 ul.apartments li .description .price {
   clear: both;
   font-family: Verdana, Geneva, sans-serif;
@@ -1663,7 +1674,7 @@ ul.apartments li .description .price {
   font-weight: bold;
   font-style: italic;
 }
-/* line 278, ../../app/stylesheets/application.sass */
+/* line 286, ../../app/stylesheets/application.sass */
 ul.apartments li .description .price span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1672,7 +1683,7 @@ ul.apartments li .description .price span {
   font-size: 35px;
 }
 
-/* line 282, ../../app/stylesheets/application.sass */
+/* line 290, ../../app/stylesheets/application.sass */
 .footer_border {
   width: 100%;
   height: 5px;
@@ -1680,18 +1691,18 @@ ul.apartments li .description .price span {
   clear: both;
 }
 
-/* line 288, ../../app/stylesheets/application.sass */
+/* line 296, ../../app/stylesheets/application.sass */
 #footer {
   width: 100%;
   height: 100px;
   background-color: #d1d5d8;
   clear: both;
 }
-/* line 294, ../../app/stylesheets/application.sass */
+/* line 302, ../../app/stylesheets/application.sass */
 #footer .menu {
   padding-top: 10px;
 }
-/* line 296, ../../app/stylesheets/application.sass */
+/* line 304, ../../app/stylesheets/application.sass */
 #footer .menu span {
   margin-right: 20px;
 }

@@ -61,8 +61,10 @@ class Admin::ApartmentsController < ::AdminController
   # DELETE /apartments/1
   # DELETE /apartments/1.xml
   def destroy
+    redirect_to :back
+    p 'here'
     @apartment = Apartment.find(params[:id])
-    @apartment.destroy
+#    @apartment.destroy
 
 
     redirect_to(admin_apartments_url)

@@ -17,8 +17,8 @@
 
       .description
         %h3
-          %a{:href => '#'}
-            2-room appartment on Izmail
+          -#%a{:href => '#'}
+          = @apartment.address
         .param
           %ul
             %li
@@ -56,7 +56,7 @@
         .price
           %span
             €
-          60
+          = @apartment.price
         .detailed-description
           -#- if I18n.locale == :en
           -#  = @apartment.en_description
