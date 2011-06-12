@@ -40,6 +40,7 @@
           = count
           %br
           - apartment.photos.each do |photo|
+            - next photo.file.thumb.url.nil? # TODO это надо починить
             = image_tag photo.file.thumb.url, :width => 50
       %td
         = link_to 'Show', [:admin, apartment] # admin_apartment(apartment)

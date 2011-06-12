@@ -1,33 +1,23 @@
 class Admin::ApartmentsController < ::AdminController
-  # GET /apartments
-  # GET /apartments.xml
+
   def index
     @apartments = Apartment.all
-
   end
 
-  # GET /apartments/1
-  # GET /apartments/1.xml
   def show
     @apartment = Apartment.find(params[:id])
-
   end
 
-  # GET /apartments/new
-  # GET /apartments/new.xml
   def new
     @apartment = Apartment.new
     @apartment.photos.build
   end
 
-  # GET /apartments/1/edit
   def edit
     @apartment = Apartment.find(params[:id])
     @photo = Photo.new
   end
 
-  # POST /apartments
-  # POST /apartments.xml
   def create
     @apartment = Apartment.new(params[:apartment])
 
@@ -42,8 +32,6 @@ class Admin::ApartmentsController < ::AdminController
     end
   end
 
-  # PUT /apartments/1
-  # PUT /apartments/1.xml
   def update
     @apartment = Apartment.find(params[:id])
 
@@ -58,16 +46,9 @@ class Admin::ApartmentsController < ::AdminController
     end
   end
 
-  # DELETE /apartments/1
-  # DELETE /apartments/1.xml
   def destroy
-    redirect_to :back
-    p 'here'
     @apartment = Apartment.find(params[:id])
-#    @apartment.destroy
-
-
+    @apartment.destroy
     redirect_to(admin_apartments_url)
-
   end
 end
