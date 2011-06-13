@@ -4,6 +4,10 @@ source 'http://gemcutter.org'
 gem 'rake', '0.8.7'
 gem 'rails', '3.0.4'
 
+group :development do
+  gem 'ruby-debug19'
+end
+
 # Верстка
 gem 'compass'
 gem "haml", ">= 3.2.0.alpha3"
