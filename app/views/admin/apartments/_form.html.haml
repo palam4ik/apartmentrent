@@ -52,8 +52,9 @@
     = f.label :ro_description
     = f.text_area :ro_description
 
-  = f.fields_for :photos do |photo_form|
-    = render 'photo', :f => photo_form
-
+  #image_placeholder
+  #add_image_button
+    Добавить картинку
+  #image_button_upload
   .actions
     = f.submit 'Save'

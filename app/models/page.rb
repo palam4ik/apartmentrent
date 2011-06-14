@@ -4,29 +4,25 @@ class Page < ActiveRecord::Base
     self.url = en_title.downcase.split.join('_')
   end
 
-  
-  def body
-    send "#{I18n.locale.to_s}_body"
+  %w(title body).each do |method|
+    class_eval %{
+      def #{method}
+        send I18n.locale.to_s + '_#{method}'
+      end
+    }
   end
 
-
-  def ro_title
-    super.force_encoding 'UTF-8'
+  %w(ro_title 
+     ru_title 
+     en_title 
+     ro_body 
+     ru_body 
+     en_body).each do |method|
+    class_eval %{
+      def #{method}
+        super.force_encoding 'UTF-8'
+      end
+    }
   end
 
-  def ru_title
-    super.force_encoding 'UTF-8'
-  end
-
-  def ro_body
-    super.force_encoding 'UTF-8'
-  end
-
-  def ru_body
-    super.force_encoding 'UTF-8'
-  end
-
-  def title
-    send "#{I18n.locale.to_s}_title"
-  end
 end
