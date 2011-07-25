@@ -1258,10 +1258,16 @@ textarea {
   margin-right: 20px;
 }
 /* line 21, ../../app/stylesheets/application.sass */
+#header .logo .slogan {
+  font-family: Georgia;
+  font-size: 16px;
+  font-style: italic;
+}
+/* line 25, ../../app/stylesheets/application.sass */
 #header .logo h1 {
   margin-bottom: 0px;
 }
-/* line 23, ../../app/stylesheets/application.sass */
+/* line 27, ../../app/stylesheets/application.sass */
 #header .logo h1 a {
   text-decoration: none;
   color: #ef3124;
@@ -1276,7 +1282,7 @@ textarea {
   text-align: left;
   letter-spacing: -2px;
 }
-/* line 36, ../../app/stylesheets/application.sass */
+/* line 40, ../../app/stylesheets/application.sass */
 #header .logo h1 a span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1295,11 +1301,11 @@ textarea {
   text-align: left;
   letter-spacing: -2px;
 }
-/* line 50, ../../app/stylesheets/application.sass */
+/* line 54, ../../app/stylesheets/application.sass */
 #header .top_menu {
   float: right;
 }
-/* line 52, ../../app/stylesheets/application.sass */
+/* line 56, ../../app/stylesheets/application.sass */
 #header .top_menu ul.menu {
   padding-left: 0px;
   list-style: none;
@@ -1310,7 +1316,7 @@ textarea {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 56, ../../app/stylesheets/application.sass */
+/* line 60, ../../app/stylesheets/application.sass */
 #header .top_menu ul.menu li a {
   font-family: Times New Roman, Times, serif;
   font-style: normal;
@@ -1323,7 +1329,7 @@ textarea {
   text-align: left;
   color: black;
 }
-/* line 67, ../../app/stylesheets/application.sass */
+/* line 71, ../../app/stylesheets/application.sass */
 #header .top_menu ul.menu li a span {
   font-family: Times New Roman, Times, serif;
   font-style: normal;
@@ -1336,11 +1342,11 @@ textarea {
   text-align: left;
   color: #ef3124;
 }
-/* line 80, ../../app/stylesheets/application.sass */
+/* line 84, ../../app/stylesheets/application.sass */
 #header .navigation {
   float: right;
 }
-/* line 82, ../../app/stylesheets/application.sass */
+/* line 86, ../../app/stylesheets/application.sass */
 #header .navigation ul.lang_switch {
   margin: 0;
   padding: 0;
@@ -1371,18 +1377,18 @@ textarea {
 #header .navigation ul.lang_switch li.last {
   padding-right: 0;
 }
-/* line 85, ../../app/stylesheets/application.sass */
+/* line 89, ../../app/stylesheets/application.sass */
 #header .tel {
   float: right;
 }
-/* line 87, ../../app/stylesheets/application.sass */
+/* line 91, ../../app/stylesheets/application.sass */
 #header .tel table {
   width: 220px;
   font-size: 25px;
   padding-right: 10px;
   margin-bottom: 10px;
 }
-/* line 92, ../../app/stylesheets/application.sass */
+/* line 96, ../../app/stylesheets/application.sass */
 #header #d_menu {
   width: 900px;
   margin: 0px auto;
@@ -1392,11 +1398,11 @@ textarea {
   display: block;
   clear: both;
 }
-/* line 100, ../../app/stylesheets/application.sass */
+/* line 104, ../../app/stylesheets/application.sass */
 #header #d_menu .for_border {
   height: 30px;
 }
-/* line 104, ../../app/stylesheets/application.sass */
+/* line 108, ../../app/stylesheets/application.sass */
 #header #d_menu .for_border .element {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -1410,13 +1416,13 @@ textarea {
   height: 30px;
   margin-left: 4px;
 }
-/* line 111, ../../app/stylesheets/application.sass */
+/* line 115, ../../app/stylesheets/application.sass */
 #header #d_menu .for_border .element .title {
   position: relative;
   bottom: 0px;
   text-align: center;
 }
-/* line 115, ../../app/stylesheets/application.sass */
+/* line 119, ../../app/stylesheets/application.sass */
 #header #d_menu .for_border .element .title a {
   text-decoration: none;
   font-family: Tahoma, Verdana, sans-serif;
@@ -1430,33 +1436,33 @@ textarea {
   text-align: center;
   color: white;
 }
-/* line 127, ../../app/stylesheets/application.sass */
+/* line 131, ../../app/stylesheets/application.sass */
 #header #d_menu .for_border .element .helper {
   padding-top: 50px;
   display: none;
 }
 
-/* line 131, ../../app/stylesheets/application.sass */
+/* line 135, ../../app/stylesheets/application.sass */
 .content {
   width: 900px;
   margin: 0px auto;
 }
-/* line 134, ../../app/stylesheets/application.sass */
+/* line 138, ../../app/stylesheets/application.sass */
 .content .two_columns {
   padding-top: 180px;
   margin-left: 10px;
 }
-/* line 137, ../../app/stylesheets/application.sass */
+/* line 141, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column {
   width: 710px;
   float: left;
 }
-/* line 140, ../../app/stylesheets/application.sass */
+/* line 144, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column .left_column_page_style {
   font-family: Times New Roman, Times, serif;
   font-size: 16px;
 }
-/* line 143, ../../app/stylesheets/application.sass */
+/* line 147, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column h2 {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1465,7 +1471,7 @@ textarea {
   font-size: 30px;
   color: black;
 }
-/* line 147, ../../app/stylesheets/application.sass */
+/* line 151, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column h2 span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1473,12 +1479,12 @@ textarea {
   color: #ef3124;
   font-size: 40px;
 }
-/* line 150, ../../app/stylesheets/application.sass */
+/* line 154, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment {
   width: 900px;
   float: left;
 }
-/* line 154, ../../app/stylesheets/application.sass */
+/* line 158, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment h2 {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1487,7 +1493,7 @@ textarea {
   font-size: 30px;
   color: black;
 }
-/* line 158, ../../app/stylesheets/application.sass */
+/* line 162, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment h2 span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1495,12 +1501,12 @@ textarea {
   color: #ef3124;
   font-size: 40px;
 }
-/* line 161, ../../app/stylesheets/application.sass */
+/* line 165, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description {
   width: 900px;
   margin-bottom: 90px;
 }
-/* line 164, ../../app/stylesheets/application.sass */
+/* line 168, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .big-image {
   height: 316px;
   width: 416px;
@@ -1510,14 +1516,14 @@ textarea {
   margin-bottom: 8px;
   margin-right: 10px;
 }
-/* line 172, ../../app/stylesheets/application.sass */
+/* line 176, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description {
   padding-left: 0px;
   float: left;
   width: 320px;
   border-left: 0px;
 }
-/* line 178, ../../app/stylesheets/application.sass */
+/* line 182, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description h3 {
   font-family: Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -1528,7 +1534,7 @@ textarea {
   text-align: left;
   color: gray;
 }
-/* line 187, ../../app/stylesheets/application.sass */
+/* line 191, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description h3 a {
   font-family: Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -1540,7 +1546,7 @@ textarea {
   text-align: left;
   color: gray;
 }
-/* line 198, ../../app/stylesheets/application.sass */
+/* line 202, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .param ul {
   list-style: none;
   padding-left: 0px;
@@ -1551,7 +1557,7 @@ textarea {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 203, ../../app/stylesheets/application.sass */
+/* line 207, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .price {
   clear: both;
   font-family: Verdana, Geneva, sans-serif;
@@ -1559,7 +1565,7 @@ textarea {
   font-weight: bold;
   font-style: italic;
 }
-/* line 209, ../../app/stylesheets/application.sass */
+/* line 213, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .apartment-description .description .price span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1567,7 +1573,7 @@ textarea {
   color: #ef3124;
   font-size: 35px;
 }
-/* line 212, ../../app/stylesheets/application.sass */
+/* line 216, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images {
   clear: both;
   margin-left: 0px;
@@ -1577,20 +1583,20 @@ textarea {
   margin-bottom: 20px;
   width: 450px;
 }
-/* line 220, ../../app/stylesheets/application.sass */
+/* line 224, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images table {
   width: 416px;
   margin-left: 0px;
   padding-left: 0px;
 }
-/* line 225, ../../app/stylesheets/application.sass */
+/* line 229, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .small-images table tr td {
   padding-left: 0px;
   padding-right: 12px;
   width: 100px;
   height: 80px;
 }
-/* line 230, ../../app/stylesheets/application.sass */
+/* line 234, ../../app/stylesheets/application.sass */
 .content .two_columns .left_column_apartment .detailed-description {
   font-family: Times New Roman, Times, serif;
   font-size: 16px;
@@ -1601,20 +1607,20 @@ textarea {
   clear: both;
   height: 50px;
 }
-/* line 240, ../../app/stylesheets/application.sass */
+/* line 244, ../../app/stylesheets/application.sass */
 .content .two_columns .additional-border {
   width: 600px;
   height: 10px;
   color: black;
   clear: both;
 }
-/* line 246, ../../app/stylesheets/application.sass */
+/* line 250, ../../app/stylesheets/application.sass */
 .content .two_columns .right_column {
   width: 180px;
   float: left;
 }
 
-/* line 251, ../../app/stylesheets/application.sass */
+/* line 255, ../../app/stylesheets/application.sass */
 ul.apartments {
   list-style: none;
   padding-left: 0px;
@@ -1625,11 +1631,11 @@ ul.apartments li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 254, ../../app/stylesheets/application.sass */
+/* line 258, ../../app/stylesheets/application.sass */
 ul.apartments li {
   clear: both;
 }
-/* line 256, ../../app/stylesheets/application.sass */
+/* line 260, ../../app/stylesheets/application.sass */
 ul.apartments li ul {
   float: left;
   margin-bottom: 30px;
@@ -1642,14 +1648,14 @@ ul.apartments li ul li {
   list-style-type: none;
   margin-left: 0px;
 }
-/* line 262, ../../app/stylesheets/application.sass */
+/* line 266, ../../app/stylesheets/application.sass */
 ul.apartments li .columns {
   width: 350px;
   border-left: 1px ridge black;
   border-bottom: 1px ridge black;
   padding-left: 8px;
 }
-/* line 267, ../../app/stylesheets/application.sass */
+/* line 271, ../../app/stylesheets/application.sass */
 ul.apartments li .description {
   padding-left: 0px;
   display: inline;
@@ -1657,7 +1663,7 @@ ul.apartments li .description {
   width: 290px;
   border-left: 0px;
 }
-/* line 274, ../../app/stylesheets/application.sass */
+/* line 278, ../../app/stylesheets/application.sass */
 ul.apartments li .description h3 a {
   font-family: Verdana, Geneva, sans-serif;
   font-style: normal;
@@ -1669,11 +1675,11 @@ ul.apartments li .description h3 a {
   text-align: left;
   color: gray;
 }
-/* line 285, ../../app/stylesheets/application.sass */
+/* line 289, ../../app/stylesheets/application.sass */
 ul.apartments li .description .param ul {
   padding-left: 0px;
 }
-/* line 287, ../../app/stylesheets/application.sass */
+/* line 291, ../../app/stylesheets/application.sass */
 ul.apartments li .description .price {
   clear: both;
   font-family: Verdana, Geneva, sans-serif;
@@ -1681,7 +1687,7 @@ ul.apartments li .description .price {
   font-weight: bold;
   font-style: italic;
 }
-/* line 293, ../../app/stylesheets/application.sass */
+/* line 297, ../../app/stylesheets/application.sass */
 ul.apartments li .description .price span {
   font-family: Georgia, Times New Roman, serif;
   font-style: italic;
@@ -1690,7 +1696,7 @@ ul.apartments li .description .price span {
   font-size: 35px;
 }
 
-/* line 297, ../../app/stylesheets/application.sass */
+/* line 301, ../../app/stylesheets/application.sass */
 .footer_border {
   width: 100%;
   height: 5px;
@@ -1698,18 +1704,18 @@ ul.apartments li .description .price span {
   clear: both;
 }
 
-/* line 303, ../../app/stylesheets/application.sass */
+/* line 307, ../../app/stylesheets/application.sass */
 #footer {
   width: 100%;
   height: 100px;
   background-color: #d1d5d8;
   clear: both;
 }
-/* line 309, ../../app/stylesheets/application.sass */
+/* line 313, ../../app/stylesheets/application.sass */
 #footer .menu {
   padding-top: 10px;
 }
-/* line 311, ../../app/stylesheets/application.sass */
+/* line 315, ../../app/stylesheets/application.sass */
 #footer .menu span {
   margin-right: 20px;
 }
