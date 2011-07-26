@@ -12,7 +12,7 @@ development:
   database: apartments_development
   pool: 5
   username: root
-  password: 
+  password:
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,15 +25,15 @@ test:
   database: apartments_test
   pool: 5
   username: root
-  password: 
+  password:
   socket: /tmp/mysql.sock
 
 production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: apartments_production
+  database: apartmentrent
   pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+  username: apartmentrent
+  password: 3cdf10oP
+  host: 10.1.1.1

@@ -34,14 +34,17 @@ task :symlink_files do
   end
 
   ['log'].each do |log|
-    path  = "#{release_path}/../../shared/#{folder}"
-    symlink_path = "#{release_path}/#{folder}"
+    path  = "#{release_path}/../../shared/#{log}"
+    symlink_path = "#{release_path}/#{log}"
     run "mkdir -p \"#{path}\""
-    run "if [! -e #{path}/production.log]; then\n touch #{path}/production.log\n fi"
-    puts "Symlinking #{folder} folder"
+    run "echo \"\" >> #{path}/production.log"
+    puts "Symlinking #{log} folder"
     run "rm -rf \"#{symlink_path}\""
     run "ln -sf \"#{path}\" \"#{symlink_path}\""
   end
+
+  database_yml = "#{release_path}/../../shared/config/database.yml"
+  run "cp -sf #{database_yml} #{release_path}/config"
 end
 
 after "deploy:update_code", "db:symlink"
