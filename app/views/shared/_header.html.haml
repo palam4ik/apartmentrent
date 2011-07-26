@@ -6,7 +6,6 @@
           <span>Apartment</span>rent
     .slogan
       = t(:slogan)
-
   .navigation
     %ul.lang_switch
       - if I18n.locale == :ru
@@ -15,14 +14,12 @@
       - else
         %li
           = link_to 'Ru', '/?language=ru'#root_url
-
       - if I18n.locale == :en
         %li.active
           En
       - else
         %li
           = link_to 'En', '/'#root_url
-
       - if I18n.locale == :ro
         %li.active
           Ro
@@ -39,8 +36,6 @@
         = i18n_link_to first_red_letter(t(:terms_and_conditions)), '/terms_and_conditions'
       %li
         = i18n_link_to first_red_letter(t(:about_us)), '/about_us'
-
-
   .tel
     %table
       %tr
@@ -49,13 +44,11 @@
       %tr
         %td
           +373 69 179 847
-
   #d_menu
     .for_border
       .element
         .title
           = i18n_link_to t(:one_room),'/apartments/1/rooms'
-
       .element
         .title
           = i18n_link_to t(:two_rooms), '/apartments/2/rooms'
