@@ -3,17 +3,17 @@
     = red_h2 t(:apartment_id, :id => @apartment.id)
     .apartment-description
       .big-image
-        = image_tag @apartment.photos.first.file.url, :width => 416, :height => 316
-        .small-images
+        = image_tag @apartment.photos.first.file.url, :width => 416, :height => 316, :id => 'big_image'
+        #small-images
           %table
             %tr
               - Photo.where(:apartment_id => @apartment.id).limit(4).all.each do |photo|
                 %td
-                  = image_tag photo.file.thumb.url, :width => 95, :height => 71
+                  = image_tag photo.file.thumb.url, :width => 95, :height => 71, :id => photo.id
             %tr
               - Photo.where(:apartment_id => @apartment.id).limit(4).offset(4).all.each do |photo|
                 %td
-                  = image_tag photo.file.thumb.url, :width => 95, :height => 71
+                  = image_tag photo.file.thumb.url, :width => 95, :height => 71,:id => photo.id
 
       .description
         %h3

@@ -37,4 +37,24 @@ $(function(){
 //        }
 //    });
 
+$('#small-images img').click(
+    function ()
+      {
+        var new_src = $(this).attr('src'),
+            big_image = $('#big_image');
+
+        new_src = new_src.replace('thumb_', '');
+
+        console.log('new source: ' + new_src);
+
+        big_image.attr('src', new_src);
+      }
+)
+
+
+
+
+
+
+
 });

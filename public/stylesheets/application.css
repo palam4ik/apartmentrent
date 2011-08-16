@@ -1574,7 +1574,7 @@ textarea {
   font-size: 35px;
 }
 /* line 216, ../../app/stylesheets/application.sass */
-.content .two_columns .left_column_apartment .small-images {
+.content .two_columns .left_column_apartment #small-images {
   clear: both;
   margin-left: 0px;
   padding-left: 0px;
@@ -1584,13 +1584,13 @@ textarea {
   width: 450px;
 }
 /* line 224, ../../app/stylesheets/application.sass */
-.content .two_columns .left_column_apartment .small-images table {
+.content .two_columns .left_column_apartment #small-images table {
   width: 416px;
   margin-left: 0px;
   padding-left: 0px;
 }
 /* line 229, ../../app/stylesheets/application.sass */
-.content .two_columns .left_column_apartment .small-images table tr td {
+.content .two_columns .left_column_apartment #small-images table tr td {
   padding-left: 0px;
   padding-right: 12px;
   width: 100px;
