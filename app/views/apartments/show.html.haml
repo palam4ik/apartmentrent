@@ -2,7 +2,7 @@
   .left_column_apartment
     = red_h2 t(:apartment_id, :id => @apartment.id)
     .apartment-description
-      .big-image
+      #big-image
         = image_tag @apartment.photos.first.file.url, :width => 416, :height => 316, :id => 'big_image'
         #small-images
           %table
