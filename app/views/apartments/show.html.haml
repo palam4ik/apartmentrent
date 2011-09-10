@@ -64,7 +64,8 @@
           -#  = @apartment.ro_description
           -#- if I18n.locale == :ru
           -#  = @apartment.ru_description
-          =  @apartment.description
+          -#= RedCloth.new("*So*me text").to_html
+          = @apartment.description
 
       .additional-border
 

@@ -27,3 +27,5 @@ gem "carrierwave"
 
 # Работа с изображениями
 gem "rmagick"
+
+gem 'RedCloth'

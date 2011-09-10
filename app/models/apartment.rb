@@ -23,7 +23,7 @@ class Apartment < ActiveRecord::Base
      en_description).each do |method|
     class_eval %{
       def #{method}
-        super.force_encoding 'UTF-8' if super
+        RedCloth.new(super.force_encoding 'UTF-8').to_html.html_safe if super
       end
     }
   end
