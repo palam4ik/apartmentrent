@@ -1,6 +1,6 @@
 set :application, "apartmentrent"
 
-set :user, "houdini"
+set :user, "hosting_houdini"
 set :use_sudo, false
 set :scm, :git
 set :repository, "git://github.com/palam4ik/apartmentrent.git"
@@ -8,13 +8,13 @@ set :repository, "git://github.com/palam4ik/apartmentrent.git"
 # If you aren't deploying to /u/apps/#{application} on the target
 # servers (which is the default), you can specify the actual location
 # via the :deploy_to variable:
-set :deploy_to, "/home/#{user}/www/#{application}"
+set :deploy_to, "/home/#{user}/projects/#{application}"
 
 # If you aren't using Subversion to manage your source code, specify
 # your SCM below:
 # set :scm, :subversion
 
-set :domain, "houdini@188.127.228.220"
+set :domain, "locum"
 
 role :app, domain
 role :web, domain
@@ -23,6 +23,7 @@ role :db,  domain, :primary => true
 set :rails_env, 'production'
 
 after "deploy:update_code", "symlink_files"
+
 task :symlink_files do
   ['photos', 'uploads'].each do |folder|
     path  = "#{release_path}/../../shared/files/#{folder}"
@@ -56,14 +57,25 @@ namespace :db do
   end
 end
 
+set :login, "houdini"
+set :unicorn_rails, "/var/lib/gems/1.8/bin/unicorn_rails"
+set :unicorn_conf, "/etc/unicorn/#{application}.#{login}.rb"
+set :unicorn_pid, "/var/run/unicorn/#{application}.#{login}.pid"
+
+# - for unicorn - #
 namespace :deploy do
-  desc "Restarting mod_rails with restart.txt"
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "touch #{current_path}/tmp/restart.txt"
+  desc "Start application"
+  task :start, :roles => :app do
+    run "#{unicorn_rails} -Dc #{unicorn_conf}"
   end
 
-  [:start, :stop].each do |t|
-    desc "#{t} task is a no-op with mod_rails"
-    task t, :roles => :app do ; end
+  desc "Stop application"
+  task :stop, :roles => :app do
+    run "[ -f #{unicorn_pid} ] && kill -QUIT `cat #{unicorn_pid}`"
+  end
+
+  desc "Restart Application"
+  task :restart, :roles => :app do
+    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_rails} -Dc #{unicorn_conf}"
   end
 end

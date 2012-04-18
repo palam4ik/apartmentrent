@@ -7,10 +7,6 @@ gem 'rails', '3.0.4'
 # Deploy
 gem 'capistrano'
 
-group :development do
-  gem 'ruby-debug19'
-end
-
 # Верстка
 gem 'compass'
 gem "haml", ">= 3.1.2"
