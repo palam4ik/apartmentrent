@@ -60,20 +60,12 @@ task :symlink_files do
   run "cp -sf #{database_yml} #{release_path}/config"
 end
 
-after "deploy:update_code", "db:symlink"
+before "deploy:assets:precompile", "db:symlink"
 
 namespace :db do
   desc "Make symlink for database yaml"
   task :symlink do
-    run "ln -nfs #{shared_path}/config/database.yml #{current_path}/config/database.yml"
-  end
-end
-
-after "deploy:update_code", "install:gems"
-namespace :install do
-  desc "install gems"
-  task :gems do
-    run "cd #{current_path} && bundle install --path ../../shared/gems"
+    run "cp #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
 
