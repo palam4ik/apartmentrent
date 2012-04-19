@@ -22,3 +22,4 @@ patches-*
 capybara-*.html
 dump.rdb
 .idea/
+.sass-cache/
