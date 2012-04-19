@@ -1,18 +1,18 @@
 set :application, "apartmentrent"
 
+set :login, "houdini"
 set :user, "hosting_houdini"
 set :use_sudo, false
 set :scm, :git
 set :repository, "git://github.com/palam4ik/apartmentrent.git"
+set :bundle_without,  [:development, :test]
 
-# If you aren't deploying to /u/apps/#{application} on the target
-# servers (which is the default), you can specify the actual location
-# via the :deploy_to variable:
-set :deploy_to, "/home/#{user}/projects/#{application}"
+load 'deploy/assets'
 
-# If you aren't using Subversion to manage your source code, specify
-# your SCM below:
-# set :scm, :subversion
+set :deploy_to,       "/home/#{user}/projects/#{application}"
+set :unicorn_conf,    "/etc/unicorn/#{application}.#{login}.rb"
+set :unicorn_pid,     "/var/run/unicorn/#{application}.#{login}.pid"
+set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
 
 set :domain, "locum"
 
@@ -21,6 +21,10 @@ role :web, domain
 role :db,  domain, :primary => true
 
 set :rails_env, 'production'
+
+set :rvm_ruby_string, "1.9.3"
+set :rake,            "rvm use #{rvm_ruby_string} do bundle exec rake"
+set :bundle_cmd,      "rvm use #{rvm_ruby_string} do bundle"
 
 after "deploy:update_code", "symlink_files"
 
@@ -57,16 +61,21 @@ namespace :db do
   end
 end
 
-set :login, "houdini"
-set :unicorn_rails, "/var/lib/gems/1.8/bin/unicorn_rails"
-set :unicorn_conf, "/etc/unicorn/#{application}.#{login}.rb"
-set :unicorn_pid, "/var/run/unicorn/#{application}.#{login}.pid"
+after "deploy:update_code", "install:gems"
+namespace :install do
+  desc "install gems"
+  task :gems do
+    run "cd #{current_path} && bundle install --path ../../shared/gems"
+  end
+end
+
+set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use #{rvm_ruby_string} do bundle exec unicorn_rails -Dc #{unicorn_conf})"
 
 # - for unicorn - #
 namespace :deploy do
   desc "Start application"
   task :start, :roles => :app do
-    run "#{unicorn_rails} -Dc #{unicorn_conf}"
+    run unicorn_start_cmd
   end
 
   desc "Stop application"
@@ -76,6 +85,6 @@ namespace :deploy do
 
   desc "Restart Application"
   task :restart, :roles => :app do
-    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_rails} -Dc #{unicorn_conf}"
+    run "[ -f #{unicorn_pid} ] && kill -USR2 `cat #{unicorn_pid}` || #{unicorn_start_cmd}"
   end
 end

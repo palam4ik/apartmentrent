@@ -21,5 +21,4 @@ nbproject
 patches-*
 capybara-*.html
 dump.rdb
-Gemfile.lock
 .idea/

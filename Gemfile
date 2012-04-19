@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 source 'http://gemcutter.org'
 
-gem 'rake', '0.8.7'
+gem 'rake'
 gem 'rails', '3.0.4'
 
 # Deploy
