@@ -111,6 +111,8 @@ GEM
     rdoc (3.12)
       json (~> 1.4)
     rmagick (2.13.1)
+    rvm-capistrano (1.1.0)
+      capistrano (>= 2.0.0)
     sass (3.1.15)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -154,6 +156,7 @@ DEPENDENCIES
   rails (= 3.2.3)
   rake
   rmagick
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   simple_form
   uglifier (>= 1.0.3)

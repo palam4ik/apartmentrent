@@ -4,7 +4,10 @@ gem 'rake'
 gem 'rails', '3.2.3'
 
 # Deploy
-gem 'capistrano'
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
 
 # Верстка
 gem 'compass'

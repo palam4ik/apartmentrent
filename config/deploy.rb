@@ -1,13 +1,21 @@
+require "rvm/capistrano"
+require "bundler/capistrano"
+load 'deploy/assets'
+
+set :user, "hosting_houdini"
+set :default_environment, {
+  'GEM_HOME'     => "/home/#{user}/gems",
+  'GEM_PATH'     => "/home/#{user}/gems",
+}
+
 set :application, "apartmentrent"
 
 set :login, "houdini"
-set :user, "hosting_houdini"
 set :use_sudo, false
 set :scm, :git
 set :repository, "git://github.com/palam4ik/apartmentrent.git"
 set :bundle_without,  [:development, :test]
 
-load 'deploy/assets'
 
 set :deploy_to,       "/home/#{user}/projects/#{application}"
 set :unicorn_conf,    "/etc/unicorn/#{application}.#{login}.rb"
